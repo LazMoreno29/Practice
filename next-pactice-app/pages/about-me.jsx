@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function AboutMe() {
   return (
     <div className={styles.container}>
       <Head>
@@ -11,6 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+      <p>this page is working</p>
     </div>
   )
 }
