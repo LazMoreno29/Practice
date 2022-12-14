@@ -1,4 +1,4 @@
-// pages/index.js
+
 import { createClient } from "next-sanity";
 
 export default function IndexPage({ animals }) {
