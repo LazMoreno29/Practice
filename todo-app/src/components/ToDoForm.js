@@ -14,6 +14,11 @@ const ToDoForm = () => {
     setNewTask('');
   };
 
+  const deleteTask = (id) => {
+    const newList = list.filter((task) => task.id !== id);
+    setLIst(newList);
+  };
+
   return (
     <div className='to-do-form'>
       <h1>Form</h1>
@@ -27,7 +32,12 @@ const ToDoForm = () => {
       <button onClick={addNewTask}>Add</button>
       <ul>
         {list.map((t) => {
-          return <li key={t.id}>{t.value}</li>;
+          return (
+            <li key={t.id}>
+              {t.value}
+              <button onClick={() => deleteTask(t.id)}>⚔️</button>
+            </li>
+          );
         })}
       </ul>
     </div>
